@@ -16,6 +16,12 @@
   width: 40px;
   background-size: cover;
 
+  &.no-mobile {
+    @media(max-width: 768px) {
+      display: none !important;
+    }
+  }
+
   @for $i from 1 through $total {
     $random-x: random(1000000) * 0.0001vw;
     $random-offset: random_range(-100000, 100000) * 0.0001vw;
